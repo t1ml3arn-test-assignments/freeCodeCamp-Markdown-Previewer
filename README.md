@@ -6,8 +6,8 @@ This is a minimal react+webpack+babel project to avoid heavy modules installatio
 
 - clone this repo
 - cd `bare-react-project`
-- `npm install`
-- `npm start`
+- `npm install` (or `pnpm install`)
+- `npm start` (or `pnpm start`)
 - go to [localhost:3000](http://localhost:3000)
 
 ## License
