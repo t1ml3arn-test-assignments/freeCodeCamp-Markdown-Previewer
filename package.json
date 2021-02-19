@@ -10,8 +10,13 @@
   "author": "",
   "license": "WTFPL 2.0",
   "dependencies": {
+    "marked": "^2.0.0",
+    "marksy": "^8.0.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3",
+    "remark-breaks": "^2.0.1",
+    "remark-gfm": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
