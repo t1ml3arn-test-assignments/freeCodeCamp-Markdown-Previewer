@@ -1,14 +1,14 @@
-# Simple react.js setup
+# Markdown Previwer
 
-This is a minimal react+webpack+babel project to avoid heavy modules installation with `create-react-app`. Based on [this guide](https://www.robinwieruch.de/minimal-react-webpack-babel-setup).
+FreeCodeCamp front-end project Markdown Previewer. See more [there](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
 
 ## Installation
 
 - clone this repo
-- cd `bare-react-project`
-- `npm install` (or `pnpm install`)
-- `npm start` (or `pnpm start`)
-- go to [localhost:3000](http://localhost:3000)
+- cd `[project-folder]`
+- `pnpm install`
+- `pnpm start`
+- open [localhost:3000](http://localhost:3000)
 
 ## License
 
