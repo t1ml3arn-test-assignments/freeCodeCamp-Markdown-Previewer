@@ -16,9 +16,57 @@ marked.use(markedOptions)
 // init marksy
 const compile = marksy({ createElement })
 
+const initialMarkdown = `
+# Markdown Previewer
+
+FreeCodeCamp front-end project **Markdown Previewer** See more [there](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
+
+## Markdown parsers
+
+The project uses different parsers:
+
+- [React Markdown](https://remarkjs.github.io/react-markdown/)
+- [Marked](https://marked.js.org/)
+- [Marksy](https://github.com/storybookjs/marksy)
+
+You can switch between them in the menu above.
+
+## Code highlight
+
+Some plugins support and set up \`code\` higlighting
+
+\`\`\`js
+let React = require('react');
+let Markdown = require('react-markdown');
+
+React.render(
+  <Markdown source="# Your markdown here" />,
+  document.getElementById('content')
+);
+\`\`\`
+
+## Quote and image
+
+I took a picture of a wall
+
+![wall photo](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Aurelian_Wall_-_Sentry.JPG/220px-Aurelian_Wall_-_Sentry.JPG). 
+
+The wall responded with
+
+>That is a nice one!
+
+but walls *don't talk*...
+
+## Installation instructions
+
+- clone repo
+- cd to its folder
+- run \`npm install\` (or \`pnpm install\`)
+
+`
 export default function MDPreviewerApp() {
 
-    const [ userInput, setUserInput ] = useState("")
+    const [ userInput, setUserInput ] = useState(initialMarkdown)
 
     const onChange = e => setUserInput(e.currentTarget.value)
 
