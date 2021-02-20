@@ -16,10 +16,9 @@ marked.use(markedOptions)
 // init marksy
 const compile = marksy({ createElement })
 
-const initialMarkdown = `
-# Markdown Previewer
+const initialMarkdown = `# Markdown Previewer
 
-FreeCodeCamp front-end project **Markdown Previewer** See more [there](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
+FreeCodeCamp front-end project **Markdown Previewer**. See more [there](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
 
 ## Markdown parsers
 
