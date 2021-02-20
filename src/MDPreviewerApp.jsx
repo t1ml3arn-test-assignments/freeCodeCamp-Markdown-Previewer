@@ -4,6 +4,8 @@ import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 import marked from 'marked'
 import brakes from 'remark-breaks'
+import { PrismLight as CodeLight } from 'react-syntax-highlighter'
+import { materialLight as themeStyle } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 const markedOptions = {
     gfm: true,
@@ -138,11 +140,16 @@ function PreviewMarked({ content }) {
     return <div id="preview" className="preview" dangerouslySetInnerHTML={{ __html: result }}></div>
 }
 
+const renderers = {
+    table: function table({ children }) { return <table className="table table-striped">{ children }</table> },
+    tableHead: function thead({ children }) { return <thead className="thead-dark">{ children }</thead> },
+    code: ({ language, value }) => <CodeLight style={ themeStyle } language={ language } children={ value }/>
+}
 function PreviewReactMarkdown({ content }) {
 
 return (
     <div id="preview" className="preview">
-        <ReactMarkdown plugins={ [gfm, brakes] }>{ content }</ReactMarkdown>
+        <ReactMarkdown renderers={ renderers } plugins={ [gfm, brakes] }>{ content }</ReactMarkdown>
     </div>
 )
 }
