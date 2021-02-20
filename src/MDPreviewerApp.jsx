@@ -79,9 +79,7 @@ This type of markdown is not standard, it provides tables, tasklists and more. F
 
 - clone repo
 - cd to its folder
-- run \`npm install\` (or \`pnpm install\`)
-
-`
+- run \`npm install\` (or \`pnpm install\`)`
 
 const LIBS = {
     ['React Markdown']: PreviewReactMarkdown,
@@ -101,8 +99,8 @@ export default function MDPreviewerApp() {
     const CurrentLibClass = LIBS[currentLib]
 
 return (
-<div className="d-flex flex-column" >    
-    <div className="row no-gutters fflex-fill">
+<div>    
+    <div className="row no-gutters">
         <div className="col">
             <Editor content={ userInput } onChange={ onUserInput }/>
         </div>
