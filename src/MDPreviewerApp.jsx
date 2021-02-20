@@ -64,11 +64,23 @@ but walls *don't talk*...
 - run \`npm install\` (or \`pnpm install\`)
 
 `
+
+const LIBS = {
+    ['React Markdown']: PreviewReactMarkdown,
+    'Marksy': PreviewMarksy,
+    'Marked': PreviewMarked
+}
+const LIBS_OPTIONS = Object.entries(LIBS).map(([key, val]) => <option key={ key } value={ key }>{ key }</option> )
+
 export default function MDPreviewerApp() {
 
     const [ userInput, setUserInput ] = useState(initialMarkdown)
+    const [ currentLib, setCurrentLib ] = useState('React Markdown')
 
     const onUserInput = e => setUserInput(e.currentTarget.value)
+    const onLibChange = e => setCurrentLib(e.currentTarget.value)
+
+    const CurrentLibClass = LIBS[currentLib]
 
 return (
 <div 
@@ -88,7 +100,8 @@ return (
         <div className="col" 
             style={{ overflowY: 'scroll', height: '100%' }}
         >
-            <PreviewReactMarkdown content={ userInput }/>
+            <SelectMDLib lib={ currentLib } onChange={ onLibChange } />
+            <CurrentLibClass content={ userInput } />
         </div>
     </div>
 </div>
@@ -126,6 +139,40 @@ function PreviewReactMarkdown({ content }) {
 return (
     <div id="preview" className="preview">
         <ReactMarkdown plugins={ [gfm, brakes] }>{ content }</ReactMarkdown>
+    </div>
+)
+}
+
+const selectStyle = {
+    position: 'absolute',
+    top: '0px',
+    right: '0px',
+    opacity: '0.75',
+    fontSize: '0.85em',
+    backgroundColor: '#f0f0f0',
+    padding: '0.5em',
+    borderRadius: '6px'
+}
+function SelectMDLib({ lib, onChange }) {
+
+    const [opacity, setOpacity] = useState(0.75)
+
+    const onMouseOver = e => setOpacity(1)
+    const onMouseLeave = e => setOpacity(.75)
+
+return (
+    <div 
+        style={ Object.assign({}, selectStyle, { opacity }) }
+        onMouseOver={ onMouseOver }
+        onMouseLeave={ onMouseLeave }
+    >
+        <span style={{ paddingBottom: '10px' }}>Chose markdown library:</span>
+        <br/>
+        <select name="" id="" 
+            value={ lib } 
+            onChange={ onChange }
+            className="custom-select"
+        >{ LIBS_OPTIONS }</select>
     </div>
 )
 }
