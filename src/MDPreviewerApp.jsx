@@ -68,15 +68,30 @@ export default function MDPreviewerApp() {
 
     const [ userInput, setUserInput ] = useState(initialMarkdown)
 
-    const onChange = e => setUserInput(e.currentTarget.value)
+    const onUserInput = e => setUserInput(e.currentTarget.value)
 
 return (
-    <div>
-        <Editor content={ userInput } onChange={ onChange }/>
-        <PreviewReactMarkdown content={ userInput }/>
-        <PreviewMarked content={ userInput } />
-        <PreviewMarksy content={ userInput } />
+<div 
+    style={{ height: '100vh', overflow: "hidden" }}
+    className="d-flex flex-column"
+>    
+    <div className="row no-gutters fflex-fill">
+        <div className="col"></div>
+        <div className="col">
+            <h2>Hello there</h2>
+        </div>
     </div>
+    <div className="row no-gutters fflex-fill">
+        <div className="col">
+            <Editor content={ userInput } onChange={ onUserInput }/>
+        </div>
+        <div className="col" 
+            style={{ overflowY: 'scroll', height: '100%' }}
+        >
+            <PreviewReactMarkdown content={ userInput }/>
+        </div>
+    </div>
+</div>
 )}
 
 function Editor(props) {
@@ -84,9 +99,11 @@ function Editor(props) {
 
 return (
     <textarea 
-        id="editor" cols="30" rows="10"
+        className="form-control"
+        id="editor"
         value={ content }
         onChange={ onChange }
+        // style={{ height: "100%" }}
     />
 )}
 
