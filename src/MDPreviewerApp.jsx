@@ -149,7 +149,11 @@ function PreviewReactMarkdown({ content }) {
 
 return (
     <div id="preview" className="preview">
-        <ReactMarkdown renderers={ renderers } plugins={ [gfm, brakes] }>{ content }</ReactMarkdown>
+        <ReactMarkdown 
+            renderers={ renderers } 
+            plugins={ [gfm, brakes] }
+            linkTarget="_blank"
+        >{ content }</ReactMarkdown>
     </div>
 )
 }
