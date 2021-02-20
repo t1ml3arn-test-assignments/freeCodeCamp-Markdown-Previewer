@@ -32,9 +32,9 @@ The project uses different parsers:
 
 You can switch between them in the menu above.
 
-## Code highlight
+## Code highlighting
 
-Some plugins support and set up \`code\` highlighting
+This feature enabled only for \`react markdown\`.
 
 \`\`\`js
 let React = require('react');
