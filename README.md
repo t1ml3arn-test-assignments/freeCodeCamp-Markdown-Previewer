@@ -2,6 +2,10 @@
 
 FreeCodeCamp front-end project Markdown Previewer. See more [there](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-markdown-previewer).
 
+## Live demo
+
+[here](https://t1ml3arn-test-assignments.github.io/freeCodeCamp-Markdown-Previewer/dist/)
+
 ## Installation
 
 - clone this repo
