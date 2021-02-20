@@ -109,6 +109,7 @@ return (
         <div className="col">
             <SelectMDLib lib={ currentLib } onChange={ onLibChange } />
             <CurrentLibClass content={ userInput } />
+            <Credits />
         </div>
     </div>
 </div>
@@ -179,3 +180,10 @@ return (
     </div>
 )
 }
+
+function Credits() {
+    return (
+        <div className="credits">
+            made by <a href="https://github.com/T1mL3arn" target="_blank" rel="noreferrer">T1m</a>
+        </div>
+)}
