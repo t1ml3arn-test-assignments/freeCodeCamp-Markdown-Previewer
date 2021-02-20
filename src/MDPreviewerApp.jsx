@@ -82,17 +82,12 @@ export default function MDPreviewerApp() {
     const CurrentLibClass = LIBS[currentLib]
 
 return (
-<div 
-    style={{ height: '100vh', overflow: "hidden" }}
-    className="d-flex flex-column"
->    
+<div className="d-flex flex-column" >    
     <div className="row no-gutters fflex-fill">
         <div className="col">
             <Editor content={ userInput } onChange={ onUserInput }/>
         </div>
-        <div className="col" 
-            style={{ overflowY: 'scroll', height: '100%' }}
-        >
+        <div className="col">
             <SelectMDLib lib={ currentLib } onChange={ onLibChange } />
             <CurrentLibClass content={ userInput } />
         </div>
