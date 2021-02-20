@@ -27,6 +27,7 @@ FreeCodeCamp front-end project **Markdown Previewer**. See more [there](https://
 The project uses different parsers:
 
 - [React Markdown](https://remarkjs.github.io/react-markdown/)
+    - with syntax highlighting!
 - [Marked](https://marked.js.org/)
 - [Marksy](https://github.com/storybookjs/marksy)
 
