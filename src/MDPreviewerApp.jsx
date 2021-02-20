@@ -56,6 +56,22 @@ The wall responded with
 
 but walls *don't talk*...
 
+## GitHub flavored markdown
+
+This type of markdown is not standard, it provides tables, tasklists and more. For the demonstration purpose it is enabled only for \`react-markdown\`.
+
+### Table 
+
+|  foo  |  bar  |
+|-------|-------|
+| bizz  | bazz  |
+| hello | world |
+
+### Tasklist
+
+- [ ] foo
+- [x] bar
+
 ## Installation instructions
 
 - clone repo
