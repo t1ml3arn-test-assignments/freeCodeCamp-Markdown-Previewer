@@ -83,15 +83,9 @@ export default function MDPreviewerApp() {
 
 return (
 <div 
-    style={{ height: '100vh', overflow: "hidden" }}
+    style={{ height: '100vh', overflowf: "hidden" }}
     className="d-flex flex-column"
 >    
-    <div className="row no-gutters fflex-fill">
-        <div className="col"></div>
-        <div className="col">
-            <h2>Hello there</h2>
-        </div>
-    </div>
     <div className="row no-gutters fflex-fill">
         <div className="col">
             <Editor content={ userInput } onChange={ onUserInput }/>
@@ -111,7 +105,7 @@ function Editor(props) {
 
 return (
     <textarea 
-        className="form-control"
+        className="form-control ffc-style-fix"
         id="editor"
         value={ content }
         onChange={ onChange }
@@ -142,26 +136,17 @@ return (
 )
 }
 
-const selectStyle = {
-    position: 'absolute',
-    top: '0px',
-    right: '0px',
-    opacity: '0.75',
-    fontSize: '0.85em',
-    backgroundColor: '#f0f0f0',
-    padding: '0.5em',
-    borderRadius: '6px'
-}
 function SelectMDLib({ lib, onChange }) {
 
     const [opacity, setOpacity] = useState(0.75)
 
-    const onMouseOver = e => setOpacity(1)
-    const onMouseLeave = e => setOpacity(.75)
+    const onMouseOver = () => setOpacity(1)
+    const onMouseLeave = () => setOpacity(.75)
 
 return (
     <div 
-        style={ Object.assign({}, selectStyle, { opacity }) }
+        style={{ opacity }}
+        className="lib-select"
         onMouseOver={ onMouseOver }
         onMouseLeave={ onMouseLeave }
     >
