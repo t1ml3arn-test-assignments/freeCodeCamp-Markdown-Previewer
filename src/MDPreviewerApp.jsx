@@ -83,7 +83,7 @@ export default function MDPreviewerApp() {
 
 return (
 <div 
-    style={{ height: '100vh', overflowf: "hidden" }}
+    style={{ height: '100vh', overflow: "hidden" }}
     className="d-flex flex-column"
 >    
     <div className="row no-gutters fflex-fill">
@@ -105,7 +105,7 @@ function Editor(props) {
 
 return (
     <textarea 
-        className="form-control ffc-style-fix"
+        className="form-control ffc-style-fix md-input"
         id="editor"
         value={ content }
         onChange={ onChange }
