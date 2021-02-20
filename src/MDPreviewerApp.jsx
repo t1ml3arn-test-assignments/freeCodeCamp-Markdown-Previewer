@@ -32,7 +32,7 @@ You can switch between them in the menu above.
 
 ## Code highlight
 
-Some plugins support and set up \`code\` higlighting
+Some plugins support and set up \`code\` highlighting
 
 \`\`\`js
 let React = require('react');
